@@ -969,6 +969,16 @@ h2 span { color: var(--blue); }
   /* Hide header entirely on mobile */
   .site-header { display: none; }
 
+  /* Swap Services and Our Work order on mobile */
+  body { display: flex; flex-direction: column; }
+  .hero { order: 1; }
+  .about { order: 2; }
+  .work { order: 3; }
+  .services { order: 4; }
+  .testimonials-contact { order: 5; }
+  .faq { order: 6; }
+  .site-footer { order: 7; }
+
   /* Tighter section padding so things feel less spaced out */
   .about,
   .services,
