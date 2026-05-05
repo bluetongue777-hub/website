@@ -32,44 +32,6 @@ a { color: inherit; }
   margin-inline: auto;
 }
 
-/* TOPBAR */
-.topbar {
-  background: linear-gradient(90deg, #000 0%, #050a14 50%, #000 100%);
-  border-bottom: 1px solid rgba(18, 135, 255, 0.25);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: var(--muted);
-}
-.topbar-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 8px 0;
-}
-.topbar-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: inherit;
-  text-transform: uppercase;
-  transition: color .15s ease;
-}
-.topbar-item svg { width: 14px; height: 14px; color: var(--blue); }
-.topbar-item:hover { color: #fff; }
-.topbar-phone:hover svg { color: var(--blue); }
-.topbar-stars { color: #ffb400; letter-spacing: 0.18em; }
-.topbar-stars-label { color: var(--muted); margin-left: 6px; letter-spacing: 0.06em; }
-@media (max-width: 760px) {
-  .topbar-inner { justify-content: center; }
-  .topbar-item:first-child { display: none; }
-}
-@media (max-width: 480px) {
-  .topbar-stars-label { display: none; }
-}
-
 /* HEADER */
 .site-header {
   background:
@@ -106,53 +68,9 @@ a { color: inherit; }
   color: #fff;
   text-decoration: none;
   transition: color .15s ease;
-  position: relative;
-  padding: 4px 0;
 }
-.main-nav a:not(.btn):not(.nav-phone)::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -6px;
-  height: 2px;
-  background: var(--blue);
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform .25s ease;
-}
-.main-nav a:not(.btn):not(.nav-phone):hover::after,
-.main-nav .active::after { transform: scaleX(1); }
 .main-nav .active,
-.main-nav a:not(.btn):hover { color: var(--blue); }
-
-.nav-phone {
-  display: inline-flex !important;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 14px !important;
-  border: 1px solid rgba(18, 135, 255, 0.45);
-  border-radius: var(--radius);
-  background: rgba(18, 135, 255, 0.08);
-  transition: background .15s ease, border-color .15s ease;
-}
-.nav-phone:hover { background: rgba(18, 135, 255, 0.18); border-color: var(--blue); color: #fff !important; }
-.nav-phone svg { width: 16px; height: 16px; color: var(--blue); flex-shrink: 0; }
-.nav-phone-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-  text-align: left;
-}
-.nav-phone strong { font-size: 0.9rem; font-weight: 800; }
-.nav-phone em {
-  font-style: normal;
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--muted);
-}
+.main-nav a:hover { color: var(--blue); }
 
 /* BUTTONS */
 .btn {
