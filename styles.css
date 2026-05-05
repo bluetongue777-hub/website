@@ -46,6 +46,50 @@ a { color: inherit; }
   box-shadow:
     0 6px 18px rgba(18, 135, 255, 0.3),
     0 14px 36px rgba(18, 135, 255, 0.18);
+  animation: header-pulse 4.5s ease-in-out infinite;
+  overflow: hidden;
+}
+.site-header::before,
+.site-header::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+}
+.site-header::before {
+  top: 0;
+  left: -20%;
+  right: -20%;
+  height: 100%;
+  background: radial-gradient(ellipse at 0% 50%, rgba(18, 135, 255, 0.18), transparent 50%);
+  animation: header-orbit 8s linear infinite;
+  z-index: -1;
+}
+.site-header::after {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, transparent 35%, rgba(120, 200, 255, 0.95) 50%, transparent 65%, transparent 100%);
+  background-size: 200% 100%;
+  animation: header-sweep 3.4s linear infinite;
+}
+@keyframes header-pulse {
+  0%, 100% { box-shadow: 0 6px 18px rgba(18, 135, 255, 0.3), 0 14px 36px rgba(18, 135, 255, 0.18); }
+  50%      { box-shadow: 0 6px 24px rgba(18, 135, 255, 0.5), 0 18px 48px rgba(18, 135, 255, 0.28); }
+}
+@keyframes header-sweep {
+  from { background-position: -100% 0; }
+  to   { background-position: 200% 0; }
+}
+@keyframes header-orbit {
+  0%   { transform: translateX(-10%); }
+  50%  { transform: translateX(10%); }
+  100% { transform: translateX(-10%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header,
+  .site-header::before,
+  .site-header::after { animation: none; }
 }
 .nav-wrap {
   display: flex;
