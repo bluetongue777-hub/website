@@ -48,15 +48,16 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     setActive(wrapped);
   };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
-        const idx = slides.indexOf(entry.target);
-        if (idx >= 0) setActive(idx);
-      }
-    });
-  }, { root: track, threshold: [0.6] });
-  slides.forEach((s) => observer.observe(s));
+  const updateFromScroll = () => {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    const idx = Math.round(track.scrollLeft / (slideWidth + gap));
+    if (idx >= 0 && idx < slides.length) setActive(idx);
+  };
+  track.addEventListener('scroll', () => {
+    clearTimeout(track._scrollIdle);
+    track._scrollIdle = setTimeout(updateFromScroll, 80);
+  });
 
   if (prev) prev.addEventListener('click', () => goTo(currentIdx - 1));
   if (next) next.addEventListener('click', () => goTo(currentIdx + 1));
