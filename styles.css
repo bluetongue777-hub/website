@@ -208,8 +208,9 @@ a { color: inherit; }
   .hero-eyebrow-desktop { display: none; }
   .hero-logo {
     display: block;
-    height: 195px;
+    height: 290px;
     width: auto;
+    max-width: 100%;
     margin: 0 auto -8px;
   }
 }
