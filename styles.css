@@ -263,8 +263,9 @@ h2 span { color: var(--blue); }
 
 /* SERVICES */
 .services {
-  background: var(--bg-alt);
+  background: var(--bg);
   color: var(--text);
+  border-top: 3px solid var(--blue);
   padding: clamp(60px, 8vw, 96px) 0;
 }
 .services .section-title { color: #fff; }
