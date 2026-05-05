@@ -833,21 +833,111 @@ h2 span { color: var(--blue); }
   letter-spacing: 0.08em;
 }
 
+.quote-block { position: relative; }
 .quote-block p { color: var(--muted); }
-.contact-list { list-style: none; padding: 0; margin: 16px 0 22px; }
-.contact-list li { margin: 10px 0; }
+.quote-lede { font-size: 1.05rem; line-height: 1.55; max-width: 580px; margin-bottom: 24px; }
+
+.quote-perks {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.quote-perks li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: #fff;
+}
+.quote-perks svg {
+  width: 22px;
+  height: 22px;
+  color: var(--blue);
+  flex-shrink: 0;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: grid;
+  gap: 10px;
+}
+.contact-list li { margin: 0; }
 .contact-list a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
   color: #fff;
   text-decoration: none;
-  transition: color .15s ease;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: border-color .15s ease, color .15s ease, background .15s ease;
 }
-.contact-list a:hover { color: var(--blue); }
+.contact-list a:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: #161616;
+}
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(18, 135, 255, 0.12);
+  color: var(--blue);
+  flex-shrink: 0;
+}
+.contact-icon svg { width: 18px; height: 18px; }
 
-.quote-form { display: grid; gap: 12px; }
+.quote-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 24px 0 18px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+.quote-divider::before,
+.quote-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.quote-form {
+  display: grid;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
 .quote-form input,
 .quote-form textarea {
   width: 100%;
-  background: var(--surface);
+  background: #0c0c0c;
   border: 1px solid var(--border);
   color: #fff;
   padding: 14px 16px;
@@ -861,9 +951,17 @@ h2 span { color: var(--blue); }
   outline: none;
   border-color: var(--blue);
   background: #161616;
+  box-shadow: 0 0 0 3px rgba(18, 135, 255, 0.15);
 }
-.quote-form textarea { resize: vertical; min-height: 110px; }
-.quote-form .btn { margin-top: 4px; justify-self: start; }
+.quote-form textarea { resize: vertical; min-height: 130px; }
+.quote-form .btn { margin-top: 6px; justify-self: start; }
+.btn-large { padding: 16px 32px; font-size: 1rem; letter-spacing: 0.06em; }
+.quote-fineprint {
+  margin: 12px 0 0 !important;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted) !important;
+}
 
 /* FOOTER */
 .site-footer {
@@ -1047,13 +1145,17 @@ h2 span { color: var(--blue); }
   .quote-block { text-align: center; }
   .quote-block .kicker { text-align: center; letter-spacing: 0.16em; }
   .quote-block .section-title.left { text-align: center; }
-  .contact-list { padding: 0; }
+  .quote-lede { margin-inline: auto; font-size: 0.98rem; }
+  .quote-perks { grid-template-columns: 1fr; gap: 8px; max-width: 360px; margin-inline: auto; margin-bottom: 24px; }
+  .quote-perks li { justify-content: center; }
+  .contact-list { padding: 0; max-width: 360px; margin-inline: auto; }
   .contact-list li { text-align: center; }
-  .contact-list a { font-size: 0.95rem; }
-  .quote-form { gap: 10px; }
+  .contact-list a { justify-content: center; font-size: 0.95rem; }
+  .quote-divider { max-width: 360px; margin-inline: auto; margin-top: 22px; }
+  .quote-form { gap: 10px; padding: 20px; }
   .quote-form input, .quote-form textarea { padding: 12px 14px; font-size: 16px; text-align: center; }
   .quote-form input::placeholder, .quote-form textarea::placeholder { text-align: center; }
-  .quote-form .btn { justify-self: center; }
+  .quote-form .btn { justify-self: stretch; width: 100%; }
 }
 
 @media (max-width: 480px) {
