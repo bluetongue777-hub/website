@@ -8,8 +8,8 @@
 body { margin: 0; font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); }
 .container { width: min(1200px, 92%); margin: 0 auto; }
 .site-header { background: #000; position: sticky; top: 0; z-index: 50; }
-.nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 0; }
-.logo { max-height: 93px; width: auto; margin-top: 28px; }
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 6px 0; }
+.logo { max-height: 93px; width: auto; margin-top: 8px; }
 .main-nav { display: flex; gap: 28px; align-items: center; text-transform: uppercase; font-weight: 700; font-size: .9rem; }
 .main-nav a { color: #fff; text-decoration: none; }
 .main-nav .active, .main-nav a:hover { color: var(--blue); }
