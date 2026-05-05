@@ -210,7 +210,7 @@ a { color: inherit; }
     display: block;
     height: 195px;
     width: auto;
-    margin: 70px auto 4px;
+    margin: 0 auto -8px;
   }
 }
 .hero h1 {
