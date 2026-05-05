@@ -220,22 +220,7 @@ a { color: inherit; }
 
 @media (max-width: 760px), (max-height: 500px) and (orientation: landscape) {
   .hero-eyebrow-desktop { display: none; }
-  .hero img.hero-logo {
-    display: block;
-    position: absolute;
-    top: -10px;
-    left: -4px;
-    height: 80px;
-    width: auto;
-    max-width: 35vw;
-    margin: 0;
-    padding: 0;
-    z-index: 5;
-    filter:
-      drop-shadow(0 3px 14px rgba(18, 135, 255, 0.5))
-      drop-shadow(0 0 28px rgba(18, 135, 255, 0.25));
-    animation: hero-logo-in 0.9s cubic-bezier(.2,.7,.2,1) both, hero-logo-pulse 6s ease-in-out 1s infinite;
-  }
+  .hero img.hero-logo { display: none; }
   .hero-card {
     animation: hero-content-in 0.9s ease-out 0.15s both;
   }
@@ -1076,7 +1061,7 @@ h2 span { color: var(--blue); }
   .nav-wrap { padding: 6px 0; }
 
   .hero { min-height: 100vh; min-height: 100svh; position: relative; }
-  .hero-overlay { min-height: 100vh; min-height: 100svh; padding: 40px 0 80px; }
+  .hero-overlay { min-height: 100vh; min-height: 100svh; padding: 60px 0 100px; }
   .hero-scroll {
     display: flex;
     flex-direction: column;
@@ -1099,17 +1084,42 @@ h2 span { color: var(--blue); }
   }
   .hero-scroll svg { width: 22px; height: 22px; animation: hero-scroll-bounce 2s ease-in-out infinite; }
   .hero-card { max-width: 100%; text-align: center; }
-  .hero-eyebrow { letter-spacing: 0.1em; font-size: 1.15rem; margin-bottom: 18px; }
-  .hero h1 { font-size: clamp(1.9rem, 8vw, 2.6rem); margin: 0 0 14px; }
-  .hero-lede { font-size: 0.95rem; margin-bottom: 22px; margin-inline: auto; }
-  .hero-cta { display: flex; flex-direction: column; align-items: center; }
-  .hero-actions { gap: 10px; justify-content: center; width: 100%; }
-  .hero-actions .btn { flex: 1; text-align: center; }
-  .hero-reviews { justify-content: center; align-self: center; }
-  .hero-cta { align-self: stretch; width: 100%; display: flex; }
-  .hero-reviews { margin-top: 14px; padding: 0; gap: 10px; flex-direction: row; align-items: center; justify-content: center; }
-  .hero-reviews .google-reviews-stars { font-size: 1.1rem; }
-  .hero-reviews .google-reviews-logo { width: 22px; height: 22px; }
+  .hero-eyebrow {
+    letter-spacing: 0.1em;
+    font-size: 1.25rem;
+    margin: 0 0 30px;
+  }
+  .hero h1 {
+    font-size: clamp(2.6rem, 10vw, 3.6rem);
+    line-height: 1.05;
+    margin: 0 0 30px;
+  }
+  .hero-lede {
+    font-size: 1.15rem;
+    line-height: 1.55;
+    margin: 0 auto 38px;
+    max-width: 520px;
+  }
+  .hero-cta {
+    align-self: stretch;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+  .hero-actions { gap: 14px; justify-content: center; width: 100%; }
+  .hero-actions .btn { flex: 1; text-align: center; padding: 18px 22px; font-size: 1rem; }
+  .hero-reviews {
+    margin-top: 6px;
+    padding: 0;
+    gap: 14px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-reviews .google-reviews-stars { font-size: 1.55rem; letter-spacing: 4px; }
+  .hero-reviews .google-reviews-logo { width: 32px; height: 32px; }
 
   .section-title { font-size: clamp(1.6rem, 6vw, 2rem); margin-bottom: 26px; }
 
@@ -1207,9 +1217,12 @@ h2 span { color: var(--blue); }
 @media (max-width: 480px) {
   .container { width: 94%; }
 
-  .hero h1 { font-size: 1.85rem; }
-  .hero-actions { flex-direction: column; }
-  .hero-actions .btn { padding: 14px 18px; font-size: 0.88rem; width: 100%; }
+  .hero h1 { font-size: 2.25rem; }
+  .hero-eyebrow { font-size: 1.1rem; }
+  .hero-lede { font-size: 1.05rem; }
+  .hero-actions { flex-direction: column; gap: 12px; }
+  .hero-actions .btn { padding: 16px 20px; font-size: 0.95rem; width: 100%; }
+  .hero-reviews .google-reviews-stars { font-size: 1.4rem; }
 
   .features { gap: 20px 14px; }
   .features li { gap: 8px; }
