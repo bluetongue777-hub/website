@@ -507,6 +507,29 @@ h2 span { color: var(--blue); }
   line-height: 1.55;
 }
 .work-lede + .carousel { margin-top: 12px; }
+.work-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 4vw, 40px);
+  flex-wrap: wrap;
+  margin: 0 0 28px;
+}
+.work-header .section-title { margin: 0; }
+.google-reviews.compact {
+  margin: 0;
+  padding: 14px 22px;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+}
+.google-reviews.compact .google-reviews-stars { font-size: 1.4rem; letter-spacing: 2px; }
+.google-reviews.compact .google-reviews-count { font-size: 0.95rem; }
+.google-reviews.compact .google-reviews-cta { font-size: 0.72rem; letter-spacing: 0.1em; margin-left: 4px; }
+@media (max-width: 600px) {
+  .google-reviews.compact { flex-direction: column; align-items: center; text-align: center; gap: 6px; }
+}
 
 .carousel {
   position: relative;
