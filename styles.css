@@ -963,8 +963,8 @@ h2 span { color: var(--blue); }
   }
   .main-nav.open { display: flex; }
   .main-nav a { padding: 10px 4px; }
-  .logo { height: 64px; transform: none; }
-  .nav-wrap { padding: 10px 0; }
+  .logo { height: 44px; transform: none; }
+  .nav-wrap { padding: 6px 0; }
 
   .hero { min-height: auto; }
   .hero-overlay { min-height: auto; padding: 60px 0 40px; }
