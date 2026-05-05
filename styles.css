@@ -200,6 +200,7 @@ h2 span { color: var(--blue); }
   background:
     radial-gradient(ellipse at 50% 0%, rgba(18, 135, 255, 0.18), transparent 60%),
     var(--bg-alt);
+  border-bottom: 3px solid var(--blue);
 }
 .about-grid {
   display: grid;
@@ -224,14 +225,6 @@ h2 span { color: var(--blue); }
 .about-content { max-width: 520px; }
 .about-content .kicker { margin-bottom: 14px; }
 .about-content h2 { margin-bottom: 22px; }
-.about-content h2::before {
-  content: '';
-  display: block;
-  width: 56px;
-  height: 3px;
-  background: var(--blue);
-  margin-bottom: 18px;
-}
 .about-content p {
   color: var(--muted);
   margin: 0 0 16px;
