@@ -261,57 +261,6 @@ h2 span { color: var(--blue); }
 }
 .feature-icon svg { width: 100%; height: 100%; }
 
-/* PROCESS */
-.process {
-  background: var(--bg-alt);
-  border-top: 3px solid var(--blue);
-  padding: clamp(60px, 8vw, 96px) 0;
-}
-.process-steps {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
-}
-.process-steps li {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 32px 28px;
-  position: relative;
-  transition: border-color .2s ease, transform .2s ease;
-}
-.process-steps li:hover { border-color: var(--blue); transform: translateY(-3px); }
-.process-num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--blue);
-  color: #fff;
-  font-weight: 900;
-  font-size: 1.1rem;
-  margin-bottom: 18px;
-}
-.process-steps h4 {
-  margin: 0 0 8px;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  color: #fff;
-}
-.process-steps p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: var(--muted);
-  line-height: 1.55;
-}
-
 /* FAQ */
 .faq {
   background: var(--bg-alt);
