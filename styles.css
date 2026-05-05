@@ -121,12 +121,12 @@ a { color: inherit; }
 /* HERO */
 .hero {
   background:
-    linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+    linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.2)),
     url('1a47d9d7-164f-4ca2-bc42-fe4ac45fbb52%20(1).jpg') center/cover no-repeat;
   min-height: 78vh;
 }
 .hero-overlay {
-  background: linear-gradient(90deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.45) 60%, rgba(0,0,0,.15) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.2) 60%, rgba(0,0,0,0) 100%);
   min-height: 78vh;
   display: flex;
   align-items: center;
