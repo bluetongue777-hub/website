@@ -218,7 +218,7 @@ a { color: inherit; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 760px), (max-height: 500px) and (orientation: landscape) {
   .hero-eyebrow-desktop { display: none; }
   .hero img.hero-logo {
     display: block;
@@ -1011,7 +1011,7 @@ h2 span { color: var(--blue); }
   .features { gap: 20px; }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 760px), (max-height: 500px) and (orientation: landscape) {
   /* Hide header entirely on mobile */
   .site-header { display: none; }
 
