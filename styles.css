@@ -337,6 +337,9 @@ h2 span { color: var(--blue); }
   margin: 0 0 40px;
   font-weight: 900;
   color: #fff;
+  text-shadow:
+    0 0 22px rgba(18, 135, 255, 0.5),
+    0 0 48px rgba(18, 135, 255, 0.28);
 }
 .section-title.left { text-align: left; margin-bottom: 24px; }
 
