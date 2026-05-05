@@ -54,7 +54,7 @@ a { color: inherit; }
   gap: 20px;
   padding: 12px 0;
 }
-.logo { height: 96px; width: auto; display: block; transform: translateY(28px); }
+.logo { height: 96px; width: auto; display: block; transform: translateY(18px); }
 .main-nav {
   display: flex;
   gap: 28px;
