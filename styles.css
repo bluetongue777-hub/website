@@ -194,7 +194,9 @@ h2 span { color: var(--blue); }
 /* ABOUT */
 .about {
   padding: clamp(60px, 8vw, 96px) 0;
-  background: var(--bg-alt);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(18, 135, 255, 0.18), transparent 60%),
+    var(--bg-alt);
 }
 .about-grid {
   display: grid;
@@ -263,7 +265,9 @@ h2 span { color: var(--blue); }
 
 /* FAQ */
 .faq {
-  background: var(--bg-alt);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(18, 135, 255, 0.18), transparent 60%),
+    var(--bg-alt);
   border-top: 3px solid var(--blue);
   padding: clamp(60px, 8vw, 96px) 0;
 }
@@ -356,7 +360,9 @@ h2 span { color: var(--blue); }
 
 /* SERVICES */
 .services {
-  background: var(--bg);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(18, 135, 255, 0.18), transparent 60%),
+    var(--bg);
   color: var(--text);
   border-top: 3px solid var(--blue);
   padding: clamp(60px, 8vw, 96px) 0;
@@ -651,7 +657,12 @@ h2 span { color: var(--blue); }
 }
 
 /* TESTIMONIALS / CONTACT */
-.testimonials-contact { padding: clamp(60px, 8vw, 96px) 0; background: var(--bg-alt); }
+.testimonials-contact {
+  padding: clamp(60px, 8vw, 96px) 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(18, 135, 255, 0.18), transparent 60%),
+    var(--bg-alt);
+}
 .tc-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
