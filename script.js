@@ -1,18 +1,17 @@
 document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
 
-// Quote form: submit via fetch and show inline success
+// Quote form: submit via fetch and show success inline on the button
 document.querySelectorAll('.quote-form').forEach((form) => {
-  const success = form.parentElement.querySelector('.quote-success');
-  if (!success) return;
   const submitBtn = form.querySelector('button[type="submit"]');
-  const originalLabel = submitBtn ? submitBtn.textContent : '';
+  if (!submitBtn) return;
+  const label = submitBtn.querySelector('.btn-label');
+  const originalText = label ? label.textContent : submitBtn.textContent;
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending…';
-    }
+    submitBtn.disabled = true;
+    submitBtn.classList.remove('is-sent');
+    if (label) label.textContent = 'Sending…';
     try {
       const res = await fetch(form.action, {
         method: 'POST',
@@ -20,14 +19,12 @@ document.querySelectorAll('.quote-form').forEach((form) => {
         headers: { Accept: 'application/json' },
       });
       if (!res.ok) throw new Error('Bad response');
-      form.hidden = true;
-      success.hidden = false;
-      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (label) label.textContent = 'Sent';
+      submitBtn.classList.add('is-sent');
+      form.querySelectorAll('input, textarea').forEach((el) => { el.disabled = true; });
     } catch (err) {
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalLabel;
-      }
+      submitBtn.disabled = false;
+      if (label) label.textContent = originalText;
       alert("Sorry — couldn't send the message just now. Please call us on 022 122 8332.");
     }
   });

@@ -937,20 +937,30 @@ h2 span { color: var(--blue); }
   color: var(--muted) !important;
 }
 
-.quote-success {
-  background: var(--surface);
-  border: 1px solid var(--blue);
-  border-radius: var(--radius);
-  padding: 28px 24px;
-  text-align: center;
-  color: #fff;
-  box-shadow: 0 16px 40px rgba(18, 135, 255, 0.18);
+.quote-form .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
-.quote-success svg { width: 44px; height: 44px; color: var(--blue); margin: 0 auto 12px; display: block; }
-.quote-success p { margin: 0 0 6px; color: #fff; }
-.quote-success p:last-child { color: var(--muted); margin: 4px 0 0; font-size: 0.95rem; }
-.quote-success a { color: var(--blue); font-weight: 800; text-decoration: none; }
-.quote-success a:hover { text-decoration: underline; }
+.btn-tick {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  height: 18px;
+  overflow: hidden;
+  transition: width .25s ease;
+  color: #fff;
+}
+.btn-tick svg { width: 18px; height: 18px; flex-shrink: 0; }
+.quote-form .btn.is-sent {
+  background: #fff;
+  color: var(--blue);
+  cursor: default;
+}
+.quote-form .btn.is-sent:hover { background: #fff; transform: none; }
+.quote-form .btn.is-sent .btn-tick { width: 22px; color: var(--blue); }
 
 @media (min-width: 760px) {
   .quote-block {
