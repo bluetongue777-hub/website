@@ -912,6 +912,8 @@ h2 span { color: var(--blue); }
   .work,
   .faq,
   .testimonials-contact { padding: 48px 0; }
+  .about { padding-top: 72px; }
+  .about-media { margin-top: 8px; }
 
   /* About: centred text + 2x2 features grid with icon above */
   .about-content {
