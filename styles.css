@@ -223,8 +223,8 @@ a { color: inherit; }
   .hero img.hero-logo {
     display: block;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -10px;
+    left: -4px;
     height: 80px;
     width: auto;
     max-width: 35vw;
