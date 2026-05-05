@@ -245,6 +245,40 @@ a { color: inherit; }
 }
 .hero-cta { display: inline-flex; flex-direction: column; align-items: stretch; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+@media (min-width: 761px) {
+  .hero-eyebrow {
+    text-shadow:
+      0 0 18px rgba(18, 135, 255, 0.55),
+      0 0 36px rgba(18, 135, 255, 0.3);
+  }
+  .hero h1 {
+    text-shadow:
+      0 0 22px rgba(18, 135, 255, 0.55),
+      0 0 48px rgba(18, 135, 255, 0.3);
+  }
+  .hero-lede {
+    text-shadow: 0 0 18px rgba(18, 135, 255, 0.35);
+  }
+  .hero .btn {
+    box-shadow:
+      0 4px 18px rgba(18, 135, 255, 0.5),
+      0 0 32px rgba(18, 135, 255, 0.25);
+  }
+  .hero .btn-outline {
+    box-shadow:
+      0 4px 18px rgba(18, 135, 255, 0.35),
+      0 0 28px rgba(18, 135, 255, 0.18);
+  }
+  .hero-reviews .google-reviews-stars {
+    text-shadow:
+      0 0 14px rgba(255, 180, 0, 0.55),
+      0 0 26px rgba(18, 135, 255, 0.45);
+  }
+  .hero-reviews .google-reviews-logo {
+    filter: drop-shadow(0 0 14px rgba(18, 135, 255, 0.45));
+  }
+}
 .hero-scroll { display: none; transition: opacity .3s ease, transform .3s ease; }
 .hero-scroll.is-hidden { opacity: 0; transform: translateY(10px); pointer-events: none; }
 @keyframes hero-scroll-bounce {
