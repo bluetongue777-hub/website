@@ -632,33 +632,42 @@ h2 span { color: var(--blue); }
 }
 .tc-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1.1fr;
   gap: clamp(32px, 5vw, 56px);
+  align-items: center;
 }
-.testimonials {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-blockquote {
-  margin: 0;
-  padding: 20px 24px;
+.google-reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
   background: var(--surface);
-  border-left: 3px solid var(--blue);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  text-decoration: none;
+  color: #fff;
+  transition: border-color .2s ease, transform .2s ease;
 }
-blockquote strong {
+.google-reviews:hover { border-color: var(--blue); transform: translateY(-3px); }
+.google-reviews-stars {
+  color: #ffb400;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+.google-reviews-count {
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.google-reviews-cta {
   color: var(--blue);
-  letter-spacing: 0.1em;
-  display: block;
-  margin-bottom: 8px;
-}
-blockquote p { line-height: 1.5; margin: 0 0 8px; color: #ddd; }
-blockquote cite {
-  font-style: normal;
-  color: var(--muted);
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .quote-block p { color: var(--muted); }
