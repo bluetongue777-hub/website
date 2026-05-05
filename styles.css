@@ -301,6 +301,18 @@ h2 span { color: var(--blue); }
   pointer-events: none;
   z-index: 2;
 }
+.faq::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  right: 0;
+  height: 36px;
+  background: radial-gradient(ellipse at 50% 50%, rgba(18, 135, 255, 0.38), transparent 70%);
+  filter: blur(8px);
+  pointer-events: none;
+  z-index: 2;
+}
 .faq-list {
   display: flex;
   flex-direction: column;
