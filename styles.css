@@ -293,15 +293,16 @@ h2 span { color: var(--blue); }
 }
 .service-item:hover { padding-left: 28px; }
 .service-item:hover::before { width: 18px; }
-.service-num {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 1.6rem;
+.service-icon {
   color: var(--blue);
-  letter-spacing: 0.05em;
-  line-height: 1;
-  padding-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
 }
+.service-icon svg { width: 100%; height: 100%; }
 .service-item h4 {
   margin: 0 0 6px;
   font-size: 1.15rem;
