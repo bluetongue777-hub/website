@@ -15,6 +15,48 @@ if (toggle && nav) {
   });
 }
 
+// Before/after compare sliders
+document.querySelectorAll('[data-compare]').forEach((compare) => {
+  const setPos = (clientX) => {
+    const rect = compare.getBoundingClientRect();
+    const pct = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
+    compare.style.setProperty('--pos', pct + '%');
+  };
+  let dragging = false;
+  compare.addEventListener('pointerdown', (e) => {
+    if (e.button !== undefined && e.button !== 0) return;
+    dragging = true;
+    compare.setPointerCapture(e.pointerId);
+    setPos(e.clientX);
+    e.preventDefault();
+  });
+  compare.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    setPos(e.clientX);
+    e.preventDefault();
+  });
+  const stop = () => { dragging = false; };
+  compare.addEventListener('pointerup', stop);
+  compare.addEventListener('pointercancel', stop);
+  compare.addEventListener('lostpointercapture', stop);
+
+  const handle = compare.querySelector('.compare-handle');
+  if (handle) {
+    handle.addEventListener('keydown', (e) => {
+      const current = parseFloat(getComputedStyle(compare).getPropertyValue('--pos')) || 50;
+      const step = e.shiftKey ? 10 : 4;
+      let next = current;
+      if (e.key === 'ArrowLeft') next = Math.max(0, current - step);
+      else if (e.key === 'ArrowRight') next = Math.min(100, current + step);
+      else if (e.key === 'Home') next = 0;
+      else if (e.key === 'End') next = 100;
+      else return;
+      e.preventDefault();
+      compare.style.setProperty('--pos', next + '%');
+    });
+  }
+});
+
 // Carousel — snap scroll with arrows, dots, auto-advance and wrap-around.
 document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   const track = carousel.querySelector('[data-carousel-track]');
