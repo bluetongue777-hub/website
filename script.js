@@ -1,5 +1,15 @@
 document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
 
+// Hide hero scroll indicator once the user starts scrolling
+const heroScroll = document.querySelector('.hero-scroll');
+if (heroScroll) {
+  const updateHeroScroll = () => {
+    heroScroll.classList.toggle('is-hidden', window.scrollY > 40);
+  };
+  updateHeroScroll();
+  window.addEventListener('scroll', updateHeroScroll, { passive: true });
+}
+
 // Quote form: submit via fetch and show success inline on the button
 document.querySelectorAll('.quote-form').forEach((form) => {
   const submitBtn = form.querySelector('button[type="submit"]');
