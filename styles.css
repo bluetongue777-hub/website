@@ -195,6 +195,7 @@ h2 span { color: var(--blue); }
 .about {
   padding: clamp(60px, 8vw, 96px) 0;
   background: var(--bg-alt);
+  border-top: 3px solid var(--blue);
 }
 .about-grid {
   display: grid;
@@ -327,7 +328,7 @@ h2 span { color: var(--blue); }
 }
 
 /* WORK / CAROUSEL */
-.work { padding: clamp(60px, 8vw, 96px) 0; background: #000; }
+.work { padding: clamp(60px, 8vw, 96px) 0; background: #000; border-top: 3px solid var(--blue); }
 
 .carousel {
   position: relative;
@@ -510,7 +511,7 @@ h2 span { color: var(--blue); }
 }
 
 /* TESTIMONIALS / CONTACT */
-.testimonials-contact { padding: clamp(60px, 8vw, 96px) 0; background: var(--bg-alt); }
+.testimonials-contact { padding: clamp(60px, 8vw, 96px) 0; background: var(--bg-alt); border-top: 3px solid var(--blue); }
 .tc-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
