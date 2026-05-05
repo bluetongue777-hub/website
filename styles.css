@@ -712,8 +712,8 @@ h2 span { color: var(--blue); }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 24px 32px;
-  margin-top: 28px;
+  padding: 22px 28px;
+  margin: 0 0 24px;
   text-decoration: none;
   color: #fff;
   transition: border-color .2s ease, transform .2s ease;
