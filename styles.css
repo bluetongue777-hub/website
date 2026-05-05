@@ -105,44 +105,26 @@ a { color: inherit; }
 .main-nav a {
   color: #fff;
   text-decoration: none;
+  transition: color .15s ease;
   position: relative;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: color .2s ease, background .2s ease, text-shadow .2s ease;
-}
-.main-nav a:not(.btn):not(.nav-phone)::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 6px;
-  background: radial-gradient(ellipse at 50% 50%, rgba(18, 135, 255, 0.22), transparent 70%);
-  opacity: 0;
-  transition: opacity .25s ease;
-  pointer-events: none;
-  z-index: -1;
+  padding: 4px 0;
 }
 .main-nav a:not(.btn):not(.nav-phone)::after {
   content: '';
   position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 2px;
+  left: 0;
+  right: 0;
+  bottom: -6px;
   height: 2px;
   background: var(--blue);
-  box-shadow: 0 0 8px rgba(18, 135, 255, 0.9);
   transform: scaleX(0);
   transform-origin: center;
   transition: transform .25s ease;
 }
-.main-nav a:not(.btn):not(.nav-phone):hover::before,
-.main-nav .active::before { opacity: 1; }
 .main-nav a:not(.btn):not(.nav-phone):hover::after,
 .main-nav .active::after { transform: scaleX(1); }
 .main-nav .active,
-.main-nav a:not(.btn):hover {
-  color: var(--blue);
-  text-shadow: 0 0 10px rgba(18, 135, 255, 0.7);
-}
+.main-nav a:not(.btn):hover { color: var(--blue); }
 
 .nav-phone {
   display: inline-flex !important;
