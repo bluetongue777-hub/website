@@ -1020,9 +1020,16 @@ h2 span { color: var(--blue); }
   .faq details p { font-size: 0.9rem; }
 
   /* Quote form polish */
-  .quote-form { gap: 10px; }
-  .quote-form input, .quote-form textarea { padding: 12px 14px; font-size: 16px; }
+  .quote-block { text-align: center; }
+  .quote-block .kicker { text-align: center; letter-spacing: 0.16em; }
+  .quote-block .section-title.left { text-align: center; }
+  .contact-list { padding: 0; }
+  .contact-list li { text-align: center; }
   .contact-list a { font-size: 0.95rem; }
+  .quote-form { gap: 10px; }
+  .quote-form input, .quote-form textarea { padding: 12px 14px; font-size: 16px; text-align: center; }
+  .quote-form input::placeholder, .quote-form textarea::placeholder { text-align: center; }
+  .quote-form .btn { justify-self: center; }
 }
 
 @media (max-width: 480px) {
