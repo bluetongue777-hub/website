@@ -44,8 +44,8 @@ a { color: inherit; }
   z-index: 50;
   border-bottom: 0;
   box-shadow:
-    0 6px 18px rgba(18, 135, 255, 0.55),
-    0 14px 36px rgba(18, 135, 255, 0.3);
+    0 6px 18px rgba(18, 135, 255, 0.3),
+    0 14px 36px rgba(18, 135, 255, 0.18);
 }
 .nav-wrap {
   display: flex;
@@ -138,8 +138,8 @@ a { color: inherit; }
   left: 0;
   right: 0;
   height: 36px;
-  background: radial-gradient(ellipse at 50% 50%, rgba(18, 135, 255, 0.7), transparent 70%);
-  filter: blur(6px);
+  background: radial-gradient(ellipse at 50% 50%, rgba(18, 135, 255, 0.38), transparent 70%);
+  filter: blur(8px);
   pointer-events: none;
   z-index: 2;
 }
@@ -296,8 +296,8 @@ h2 span { color: var(--blue); }
   left: 0;
   right: 0;
   height: 36px;
-  background: radial-gradient(ellipse at 50% 50%, rgba(18, 135, 255, 0.7), transparent 70%);
-  filter: blur(6px);
+  background: radial-gradient(ellipse at 50% 50%, rgba(18, 135, 255, 0.38), transparent 70%);
+  filter: blur(8px);
   pointer-events: none;
   z-index: 2;
 }
@@ -404,8 +404,8 @@ h2 span { color: var(--blue); }
   left: 0;
   right: 0;
   height: 36px;
-  background: radial-gradient(ellipse at 50% 50%, rgba(18, 135, 255, 0.7), transparent 70%);
-  filter: blur(6px);
+  background: radial-gradient(ellipse at 50% 50%, rgba(18, 135, 255, 0.38), transparent 70%);
+  filter: blur(8px);
   pointer-events: none;
   z-index: 2;
 }
@@ -416,8 +416,8 @@ h2 span { color: var(--blue); }
   left: 0;
   right: 0;
   height: 36px;
-  background: radial-gradient(ellipse at 50% 50%, rgba(18, 135, 255, 0.7), transparent 70%);
-  filter: blur(6px);
+  background: radial-gradient(ellipse at 50% 50%, rgba(18, 135, 255, 0.38), transparent 70%);
+  filter: blur(8px);
   pointer-events: none;
   z-index: 2;
 }
