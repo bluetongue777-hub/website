@@ -220,12 +220,12 @@ a { color: inherit; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .hero-reviews {
   margin-top: 22px;
-  background: rgba(0, 0, 0, 0.55);
-  border-color: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: transparent;
+  border: 0;
+  padding: 0;
   align-self: flex-start;
 }
+.hero-reviews:hover { border: 0; transform: translateY(-3px); }
 
 /* SECTIONS */
 section { scroll-margin-top: 80px; }
