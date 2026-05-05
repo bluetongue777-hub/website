@@ -1048,8 +1048,10 @@ h2 span { color: var(--blue); }
     gap: 6px;
     position: absolute;
     bottom: 22px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: max-content;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -1058,9 +1060,8 @@ h2 span { color: var(--blue); }
     font-weight: 800;
     opacity: 0.85;
     z-index: 3;
-    animation: hero-scroll-bounce 2s ease-in-out infinite;
   }
-  .hero-scroll svg { width: 22px; height: 22px; }
+  .hero-scroll svg { width: 22px; height: 22px; animation: hero-scroll-bounce 2s ease-in-out infinite; }
   .hero-card { max-width: 100%; text-align: center; }
   .hero-eyebrow { letter-spacing: 0.12em; font-size: 0.78rem; }
   .hero h1 { font-size: clamp(1.9rem, 8vw, 2.6rem); margin-bottom: 14px; }
