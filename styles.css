@@ -794,7 +794,7 @@ h2 span { color: var(--blue); }
   display: grid;
   grid-template-columns: 1fr;
   gap: clamp(32px, 5vw, 40px);
-  max-width: 720px;
+  max-width: 1200px;
   margin-inline: auto;
 }
 .google-reviews {
@@ -897,13 +897,15 @@ h2 span { color: var(--blue); }
 
 .quote-form {
   display: grid;
-  gap: 12px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 26px;
+  padding: 36px;
   box-shadow: 0 16px 40px rgba(0,0,0,0.35);
   align-self: start;
+  line-height: 1.5;
 }
 .quote-form input,
 .quote-form textarea {
@@ -911,9 +913,10 @@ h2 span { color: var(--blue); }
   background: #0c0c0c;
   border: 1px solid var(--border);
   color: #fff;
-  padding: 14px 16px;
+  padding: 18px 20px;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 17px;
+  line-height: 1.5;
   border-radius: var(--radius);
   transition: border-color .15s ease, background .15s ease, box-shadow .15s ease;
 }
@@ -924,8 +927,9 @@ h2 span { color: var(--blue); }
   background: #161616;
   box-shadow: 0 0 0 3px rgba(18, 135, 255, 0.18);
 }
-.quote-form textarea { resize: vertical; min-height: 130px; }
-.quote-form .btn { margin-top: 6px; justify-self: stretch; padding: 16px 24px; font-size: 0.95rem; }
+.quote-form textarea { resize: vertical; min-height: 160px; grid-column: 1 / -1; }
+.quote-form .btn { margin-top: 8px; justify-self: stretch; padding: 18px 28px; font-size: 1rem; grid-column: 1 / -1; }
+.quote-form .quote-fineprint { grid-column: 1 / -1; }
 .quote-fineprint {
   margin: 8px 0 0 !important;
   text-align: center;
@@ -935,11 +939,19 @@ h2 span { color: var(--blue); }
 
 @media (min-width: 760px) {
   .quote-block {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.15fr;
     align-items: start;
+    gap: clamp(36px, 5vw, 64px);
   }
   .quote-info { padding-right: 8px; }
-  .quote-form { position: sticky; top: 100px; }
+  .quote-form {
+    position: sticky;
+    top: 100px;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 20px;
+    padding: 44px;
+  }
+  .quote-form input[name="email"] { grid-column: 1 / -1; }
 }
 
 /* FOOTER */
@@ -1144,8 +1156,9 @@ h2 span { color: var(--blue); }
     border: 0;
     padding: 0;
     box-shadow: none;
-    gap: 10px;
+    gap: 14px;
     position: static;
+    grid-template-columns: 1fr;
   }
   .quote-form input, .quote-form textarea { padding: 12px 14px; font-size: 16px; text-align: center; }
   .quote-form input::placeholder, .quote-form textarea::placeholder { text-align: center; }
