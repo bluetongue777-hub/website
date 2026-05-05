@@ -697,19 +697,22 @@ h2 span { color: var(--blue); }
 }
 .tc-grid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: clamp(32px, 5vw, 56px);
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: clamp(32px, 5vw, 40px);
+  max-width: 720px;
+  margin-inline: auto;
 }
 .google-reviews {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: 10px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 32px;
+  padding: 24px 32px;
+  margin-top: 28px;
   text-decoration: none;
   color: #fff;
   transition: border-color .2s ease, transform .2s ease;
