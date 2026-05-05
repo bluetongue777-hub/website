@@ -261,35 +261,6 @@ h2 span { color: var(--blue); }
 }
 .feature-icon svg { width: 100%; height: 100%; }
 
-/* CTA BANNER */
-.cta-banner {
-  background: var(--blue);
-  color: #fff;
-  padding: clamp(20px, 3vw, 32px) 0;
-}
-.cta-banner-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-.cta-banner p {
-  margin: 0;
-  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-.cta-banner-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.cta-banner .btn { background: #000; }
-.cta-banner .btn:hover { background: #111; }
-.cta-banner .btn-outline { background: transparent; border-color: #fff; color: #fff; }
-.cta-banner .btn-outline:hover { background: #fff; color: var(--blue); border-color: #fff; }
-@media (max-width: 760px) {
-  .cta-banner-inner { justify-content: center; text-align: center; }
-}
-
 /* SERVICES */
 .services {
   background: var(--bg);
