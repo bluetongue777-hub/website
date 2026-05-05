@@ -204,9 +204,23 @@ a { color: inherit; }
   margin: 0 0 14px;
 }
 .hero-logo { display: none; }
+
+@keyframes hero-logo-in {
+  from { opacity: 0; transform: translateY(-12px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes hero-logo-pulse {
+  0%, 100% { filter: drop-shadow(0 3px 14px rgba(18, 135, 255, 0.5)) drop-shadow(0 0 28px rgba(18, 135, 255, 0.25)); }
+  50%      { filter: drop-shadow(0 4px 18px rgba(18, 135, 255, 0.7)) drop-shadow(0 0 40px rgba(18, 135, 255, 0.38)); }
+}
+@keyframes hero-content-in {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 760px) {
   .hero-eyebrow-desktop { display: none; }
-  .hero-logo {
+  .hero img.hero-logo {
     display: block;
     position: absolute;
     top: 0;
@@ -215,7 +229,8 @@ a { color: inherit; }
     width: auto;
     max-width: 35vw;
     margin: 0;
-    z-index: 3;
+    padding: 0;
+    z-index: 5;
     filter:
       drop-shadow(0 3px 14px rgba(18, 135, 255, 0.5))
       drop-shadow(0 0 28px rgba(18, 135, 255, 0.25));
@@ -224,24 +239,9 @@ a { color: inherit; }
   .hero-card {
     animation: hero-content-in 0.9s ease-out 0.15s both;
   }
-  @keyframes hero-content-in {
-    from { opacity: 0; transform: translateY(18px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .hero-card { animation: none; }
-  }
-  @keyframes hero-logo-in {
-    from { opacity: 0; transform: translateY(-12px) scale(0.96); }
-    to   { opacity: 1; transform: translateY(0) scale(1); }
-  }
-  @keyframes hero-logo-pulse {
-    0%, 100% { filter: drop-shadow(0 4px 18px rgba(18, 135, 255, 0.55)) drop-shadow(0 0 36px rgba(18, 135, 255, 0.28)); }
-    50%      { filter: drop-shadow(0 4px 22px rgba(18, 135, 255, 0.75)) drop-shadow(0 0 48px rgba(18, 135, 255, 0.4)); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .hero-logo { animation: none; }
-  }
+}
+@media (max-width: 760px) and (prefers-reduced-motion: reduce) {
+  .hero img.hero-logo, .hero-card { animation: none; }
 }
 .hero h1 {
   font-size: clamp(2.4rem, 5.5vw, 5rem);
