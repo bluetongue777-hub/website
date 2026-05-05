@@ -875,6 +875,18 @@ h2 span { color: var(--blue); }
 }
 
 @media (max-width: 760px) {
+  /* Tame the header animations on mobile (battery + distraction) */
+  .site-header { animation: none; box-shadow: 0 4px 14px rgba(18, 135, 255, 0.28); }
+  .site-header::before, .site-header::after { animation: none; }
+  .site-header::after { display: none; }
+
+  /* Tighter section padding so things feel less spaced out */
+  .about,
+  .services,
+  .work,
+  .faq,
+  .testimonials-contact { padding: 48px 0; }
+
   .menu-toggle { display: flex; }
   .main-nav {
     display: none;
@@ -891,28 +903,37 @@ h2 span { color: var(--blue); }
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   }
   .main-nav.open { display: flex; }
-  .logo { height: 64px; transform: translateY(6px); }
-  .hero { min-height: 64vh; }
-  .hero-overlay { min-height: 64vh; padding: 40px 0; }
-  .hero-eyebrow { letter-spacing: 0.12em; }
-  .hero h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
-  .hero-lede { font-size: 0.95rem; }
+  .logo { height: 64px; transform: none; }
+  .nav-wrap { padding: 10px 0; }
+
+  .hero { min-height: auto; }
+  .hero-overlay { min-height: auto; padding: 60px 0 40px; }
+  .hero-card { max-width: 100%; }
+  .hero-eyebrow { letter-spacing: 0.12em; font-size: 0.78rem; }
+  .hero h1 { font-size: clamp(1.9rem, 8vw, 2.6rem); margin-bottom: 14px; }
+  .hero-lede { font-size: 0.95rem; margin-bottom: 22px; }
   .hero-actions { gap: 10px; }
   .hero-actions .btn { flex: 1; text-align: center; }
+  .hero-reviews { margin-top: 18px; align-self: stretch; padding: 12px 18px; gap: 10px; }
+  .hero-reviews .google-reviews-stars { font-size: 1.2rem; }
+  .hero-reviews .google-reviews-count { font-size: 0.85rem; }
 
-  .carousel-btn { width: 42px; height: 42px; }
-  .carousel-btn.prev { left: 8px; }
-  .carousel-btn.next { right: 8px; }
+  .section-title { font-size: clamp(1.6rem, 6vw, 2rem); margin-bottom: 26px; }
+
+  .carousel-btn { width: 40px; height: 40px; }
+  .carousel-btn.prev { left: 6px; }
+  .carousel-btn.next { right: 6px; }
+  .carousel-slide figcaption { left: 10px; bottom: 10px; padding: 4px 10px; font-size: 0.7rem; }
 
   .footer-wrap { flex-direction: column; text-align: center; }
 
   /* Service rows: tighter, no hover slide on touch */
-  .service-item { padding: 22px 4px; gap: 16px; }
+  .service-item { padding: 18px 4px; gap: 14px; }
   .service-item:hover { padding-left: 4px; }
   .service-item:hover::before { width: 0; }
-  .service-icon { width: 38px; height: 38px; }
-  .service-item h4 { font-size: 1rem; }
-  .service-item p { font-size: 0.9rem; }
+  .service-icon { width: 36px; height: 36px; }
+  .service-item h4 { font-size: 0.95rem; margin-bottom: 4px; }
+  .service-item p { font-size: 0.85rem; line-height: 1.5; }
 
   /* Bigger touch target on compare slider */
   .compare-handle { width: 54px; height: 54px; }
@@ -926,30 +947,42 @@ h2 span { color: var(--blue); }
   .services::before,
   .services::after,
   .faq::before,
-  .faq::after { height: 24px; filter: blur(6px); }
+  .faq::after { height: 22px; filter: blur(5px); }
 
   /* Reviews badge below the title on small screens */
   .work-header { gap: 14px; flex-direction: column; }
+  .work-lede { margin: -10px auto 22px; font-size: 0.95rem; }
 
   /* FAQ summary slightly smaller */
-  .faq summary { font-size: 0.92rem; gap: 10px; }
+  .faq summary { font-size: 0.9rem; gap: 10px; }
+  .faq details { padding: 14px 18px; }
+  .faq details p { font-size: 0.9rem; }
+
+  /* Quote form polish */
+  .quote-form { gap: 10px; }
+  .quote-form input, .quote-form textarea { padding: 12px 14px; font-size: 16px; }
+  .contact-list a { font-size: 0.95rem; }
 }
 
 @media (max-width: 480px) {
-  .hero h1 { font-size: 1.9rem; }
-  .hero-actions .btn { padding: 12px 18px; font-size: 0.82rem; }
+  .container { width: 94%; }
 
-  .features { gap: 16px; }
-  .features li { gap: 16px; }
-  .feature-icon { width: 44px; height: 44px; }
-  .feature-text { font-size: 1rem; }
+  .hero h1 { font-size: 1.85rem; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn { padding: 14px 18px; font-size: 0.88rem; width: 100%; }
 
-  .work-header .section-title { font-size: 1.6rem; }
-  .google-reviews.compact { padding: 12px 18px; gap: 10px; }
-  .google-reviews.compact .google-reviews-stars { font-size: 1.2rem; }
-  .google-reviews.compact .google-reviews-count { font-size: 0.85rem; }
+  .features { gap: 14px; }
+  .features li { gap: 14px; }
+  .feature-icon { width: 40px; height: 40px; }
+  .feature-text { font-size: 0.95rem; }
 
-  .quote-block .section-title.left { font-size: 1.6rem; }
+  .work-header .section-title { font-size: 1.55rem; }
+  .google-reviews.compact { padding: 12px 16px; gap: 8px; }
+  .google-reviews.compact .google-reviews-stars { font-size: 1.1rem; letter-spacing: 1px; }
+  .google-reviews.compact .google-reviews-count { font-size: 0.8rem; }
+  .google-reviews.compact .google-reviews-cta { font-size: 0.65rem; }
+
+  .quote-block .section-title.left { font-size: 1.55rem; }
 
   .footer-wrap img { height: 40px; width: auto; }
 }
