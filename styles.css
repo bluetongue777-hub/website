@@ -34,13 +34,16 @@ a { color: inherit; }
 
 /* HEADER */
 .site-header {
-  background: rgba(0, 0, 0, 0.92);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(18, 135, 255, 0.22), transparent 70%),
+    rgba(0, 0, 0, 0.92);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
   z-index: 50;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid var(--blue);
+  box-shadow: 0 6px 24px rgba(18, 135, 255, 0.18);
 }
 .nav-wrap {
   display: flex;
