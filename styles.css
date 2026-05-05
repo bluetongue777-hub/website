@@ -256,45 +256,64 @@ h2 span { color: var(--blue); }
 
 /* SERVICES */
 .services {
-  background: var(--light);
-  color: #111;
+  background: var(--bg-alt);
+  color: var(--text);
   padding: clamp(60px, 8vw, 96px) 0;
 }
-.services .kicker { color: var(--blue); }
-.services-grid {
+.services .section-title { color: #fff; }
+.services-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--border);
 }
-.service-card {
-  background: #fff;
-  border-radius: var(--radius);
-  padding: 32px 24px;
-  text-align: center;
-  border: 1px solid var(--light-dark);
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+.service-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  align-items: start;
+  padding: 28px 4px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  transition: padding-left .25s ease;
 }
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.1);
-  border-color: var(--blue);
+.service-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--blue);
+  transform: translateY(-50%);
+  transition: width .25s ease;
 }
-.service-icon {
-  font-size: 2.4rem;
-  margin-bottom: 14px;
+.service-item:hover { padding-left: 28px; }
+.service-item:hover::before { width: 18px; }
+.service-num {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: var(--blue);
+  letter-spacing: 0.05em;
   line-height: 1;
+  padding-top: 4px;
 }
-.service-card h4 {
-  margin: 0 0 8px;
-  font-size: 1rem;
+.service-item h4 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
   text-transform: uppercase;
   font-weight: 800;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
+  color: #fff;
 }
-.service-card p {
+.service-item p {
   margin: 0;
-  font-size: 0.88rem;
-  color: #555;
+  font-size: 0.95rem;
+  color: var(--muted);
   line-height: 1.5;
 }
 
