@@ -203,10 +203,15 @@ a { color: inherit; }
   font-size: 0.85rem;
   margin: 0 0 14px;
 }
-.hero-eyebrow-mobile { display: none; }
+.hero-logo { display: none; }
 @media (max-width: 760px) {
   .hero-eyebrow-desktop { display: none; }
-  .hero-eyebrow-mobile { display: block; }
+  .hero-logo {
+    display: block;
+    height: 80px;
+    width: auto;
+    margin: 0 auto 18px;
+  }
 }
 .hero h1 {
   font-size: clamp(2.4rem, 5.5vw, 5rem);
