@@ -1040,8 +1040,8 @@ h2 span { color: var(--blue); }
   .logo { height: 44px; transform: none; }
   .nav-wrap { padding: 6px 0; }
 
-  .hero { min-height: 100vh; min-height: 100svh; position: relative; }
-  .hero-overlay { min-height: 100vh; min-height: 100svh; padding: 40px 0 80px; }
+  .hero { min-height: 90vh; min-height: 90svh; position: relative; }
+  .hero-overlay { min-height: 90vh; min-height: 90svh; padding: 40px 0 80px; }
   .hero-scroll {
     display: flex;
     flex-direction: column;
