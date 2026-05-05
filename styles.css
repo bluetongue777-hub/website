@@ -173,7 +173,6 @@ a { color: inherit; }
   max-width: 540px;
   margin: 0 0 28px;
 }
-.hero-mike { font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 900; text-transform: uppercase; color: #fff; margin: 0 0 20px; letter-spacing: 0.06em; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
 /* SECTIONS */
