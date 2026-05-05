@@ -208,10 +208,14 @@ a { color: inherit; }
   .hero-eyebrow-desktop { display: none; }
   .hero-logo {
     display: block;
-    height: 290px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    height: 145px;
     width: auto;
-    max-width: 100%;
-    margin: 0 auto -8px;
+    max-width: 50%;
+    margin: 0;
+    z-index: 3;
     filter:
       drop-shadow(0 4px 18px rgba(18, 135, 255, 0.55))
       drop-shadow(0 0 36px rgba(18, 135, 255, 0.28));
@@ -1061,8 +1065,8 @@ h2 span { color: var(--blue); }
   .logo { height: 44px; transform: none; }
   .nav-wrap { padding: 6px 0; }
 
-  .hero { min-height: 90vh; min-height: 90svh; position: relative; }
-  .hero-overlay { min-height: 90vh; min-height: 90svh; padding: 40px 0 80px; }
+  .hero { min-height: 100vh; min-height: 100svh; position: relative; }
+  .hero-overlay { min-height: 100vh; min-height: 100svh; padding: 40px 0 80px; }
   .hero-scroll {
     display: flex;
     flex-direction: column;
@@ -1086,7 +1090,7 @@ h2 span { color: var(--blue); }
   .hero-scroll svg { width: 22px; height: 22px; animation: hero-scroll-bounce 2s ease-in-out infinite; }
   .hero-card { max-width: 100%; text-align: center; }
   .hero-eyebrow { letter-spacing: 0.1em; font-size: 1.15rem; margin-bottom: 18px; }
-  .hero h1 { font-size: clamp(1.9rem, 8vw, 2.6rem); margin: -60px 0 14px; }
+  .hero h1 { font-size: clamp(1.9rem, 8vw, 2.6rem); margin: 0 0 14px; }
   .hero-lede { font-size: 0.95rem; margin-bottom: 22px; margin-inline: auto; }
   .hero-cta { display: flex; flex-direction: column; align-items: center; }
   .hero-actions { gap: 10px; justify-content: center; width: 100%; }
