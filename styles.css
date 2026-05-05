@@ -265,7 +265,7 @@ h2 span { color: var(--blue); }
 .cta-banner {
   background: var(--blue);
   color: #fff;
-  padding: clamp(40px, 6vw, 64px) 0;
+  padding: clamp(20px, 3vw, 32px) 0;
 }
 .cta-banner-inner {
   display: flex;
