@@ -122,7 +122,7 @@ a { color: inherit; }
 .hero {
   background:
     linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
-    url('hero.jpg') center/cover no-repeat;
+    url('clear%20this%20one.jpg') center/cover no-repeat;
   min-height: 78vh;
 }
 .hero-overlay {
