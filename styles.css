@@ -33,7 +33,6 @@ a { color: inherit; }
 }
 
 /* HEADER */
-/* DIVIDER MOCK A: double line (racing stripe) */
 .site-header {
   background:
     radial-gradient(ellipse at 50% 0%, rgba(18, 135, 255, 0.22), transparent 70%),
@@ -43,11 +42,10 @@ a { color: inherit; }
   position: sticky;
   top: 0;
   z-index: 50;
-  border-bottom: 2px solid var(--blue);
+  border-bottom: 0;
   box-shadow:
-    0 4px 0 #000,
-    0 6px 0 var(--blue),
-    0 10px 24px rgba(18, 135, 255, 0.2);
+    0 6px 18px rgba(18, 135, 255, 0.55),
+    0 14px 36px rgba(18, 135, 255, 0.3);
 }
 .nav-wrap {
   display: flex;
@@ -126,17 +124,24 @@ a { color: inherit; }
 .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* HERO */
-/* DIVIDER MOCK B: glowing line */
 .hero {
   background:
     linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
     url('1a47d9d7-164f-4ca2-bc42-fe4ac45fbb52%20(1).jpg') center/cover no-repeat;
   min-height: 78vh;
-  border-bottom: 2px solid var(--blue);
-  box-shadow:
-    inset 0 -1px 0 var(--blue),
-    0 0 12px 1px rgba(18, 135, 255, 0.85),
-    0 0 32px 4px rgba(18, 135, 255, 0.4);
+  position: relative;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  right: 0;
+  height: 36px;
+  background: radial-gradient(ellipse at 50% 50%, rgba(18, 135, 255, 0.7), transparent 70%);
+  filter: blur(6px);
+  pointer-events: none;
+  z-index: 2;
 }
 .hero-overlay {
   background: linear-gradient(90deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.45) 60%, rgba(0,0,0,.15) 100%);
@@ -277,34 +282,24 @@ h2 span { color: var(--blue); }
 .feature-icon svg { width: 100%; height: 100%; }
 
 /* FAQ */
-/* DIVIDER MOCK E: animated shimmer */
 .faq {
   background:
     radial-gradient(ellipse at 50% 0%, rgba(18, 135, 255, 0.18), transparent 60%),
     var(--bg-alt);
-  border-top: 3px solid var(--blue);
   padding: clamp(60px, 8vw, 96px) 0;
   position: relative;
-  overflow: hidden;
 }
 .faq::before {
   content: '';
   position: absolute;
-  top: -3px;
+  top: -18px;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent 0%, transparent 40%, rgba(255,255,255,0.95) 50%, transparent 60%, transparent 100%);
-  background-size: 200% 100%;
-  animation: divider-shimmer 3.2s linear infinite;
+  height: 36px;
+  background: radial-gradient(ellipse at 50% 50%, rgba(18, 135, 255, 0.7), transparent 70%);
+  filter: blur(6px);
   pointer-events: none;
-}
-@keyframes divider-shimmer {
-  from { background-position: -100% 0; }
-  to   { background-position: 200% 0; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .faq::before { animation: none; }
+  z-index: 2;
 }
 .faq-list {
   display: flex;
@@ -394,7 +389,6 @@ h2 span { color: var(--blue); }
 }
 
 /* SERVICES */
-/* DIVIDER MOCK C: faded gradient (top) + DIVIDER MOCK D: soft glow band (bottom) */
 .services {
   background:
     radial-gradient(ellipse at 50% 0%, rgba(18, 135, 255, 0.18), transparent 60%),
@@ -406,11 +400,14 @@ h2 span { color: var(--blue); }
 .services::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: -18px;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--blue) 30%, var(--blue) 70%, transparent);
+  height: 36px;
+  background: radial-gradient(ellipse at 50% 50%, rgba(18, 135, 255, 0.7), transparent 70%);
+  filter: blur(6px);
+  pointer-events: none;
+  z-index: 2;
 }
 .services::after {
   content: '';
@@ -422,6 +419,7 @@ h2 span { color: var(--blue); }
   background: radial-gradient(ellipse at 50% 50%, rgba(18, 135, 255, 0.7), transparent 70%);
   filter: blur(6px);
   pointer-events: none;
+  z-index: 2;
 }
 .services .section-title { color: #fff; }
 .services-list {
