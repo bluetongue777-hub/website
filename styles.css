@@ -224,6 +224,11 @@ a { color: inherit; }
 }
 .hero-cta { display: inline-flex; flex-direction: column; align-items: stretch; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-scroll { display: none; }
+@keyframes hero-scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.8; }
+  50%      { transform: translateY(8px); opacity: 1; }
+}
 .google-reviews.hero-reviews,
 .google-reviews.compact.hero-reviews {
   margin: 18px 0 0;
@@ -1034,8 +1039,28 @@ h2 span { color: var(--blue); }
   .logo { height: 44px; transform: none; }
   .nav-wrap { padding: 6px 0; }
 
-  .hero { min-height: 100vh; min-height: 100svh; }
-  .hero-overlay { min-height: 100vh; min-height: 100svh; padding: 40px 0; }
+  .hero { min-height: 100vh; min-height: 100svh; position: relative; }
+  .hero-overlay { min-height: 100vh; min-height: 100svh; padding: 40px 0 80px; }
+  .hero-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.7rem;
+    font-weight: 800;
+    opacity: 0.85;
+    z-index: 3;
+    animation: hero-scroll-bounce 2s ease-in-out infinite;
+  }
+  .hero-scroll svg { width: 22px; height: 22px; }
   .hero-card { max-width: 100%; text-align: center; }
   .hero-eyebrow { letter-spacing: 0.12em; font-size: 0.78rem; }
   .hero h1 { font-size: clamp(1.9rem, 8vw, 2.6rem); margin-bottom: 14px; }
