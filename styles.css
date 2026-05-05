@@ -402,11 +402,8 @@ h2 span { color: var(--blue); }
 }
 .carousel-dots button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 
-@media (min-width: 760px) {
-  .carousel-slide { flex-basis: calc((100% - 16px) / 2); }
-}
 @media (min-width: 1100px) {
-  .carousel-slide { flex-basis: calc((100% - 32px) / 3); }
+  .carousel-slide { aspect-ratio: 16 / 9; }
 }
 
 /* TESTIMONIALS / CONTACT */
