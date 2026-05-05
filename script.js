@@ -36,23 +36,36 @@ document.querySelectorAll('[data-compare]').forEach((compare) => {
     const pct = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
     compare.style.setProperty('--pos', pct + '%');
   };
-  let dragging = false;
-  compare.addEventListener('pointerdown', (e) => {
+  let activePointer = null;
+
+  const onDown = (e) => {
     if (e.button !== undefined && e.button !== 0) return;
-    dragging = true;
-    compare.setPointerCapture(e.pointerId);
+    activePointer = e.pointerId;
+    try { compare.setPointerCapture(e.pointerId); } catch (_) {}
     setPos(e.clientX);
     e.preventDefault();
-  });
-  compare.addEventListener('pointermove', (e) => {
-    if (!dragging) return;
+  };
+  const onMove = (e) => {
+    if (activePointer !== e.pointerId) return;
     setPos(e.clientX);
     e.preventDefault();
-  });
-  const stop = () => { dragging = false; };
-  compare.addEventListener('pointerup', stop);
-  compare.addEventListener('pointercancel', stop);
-  compare.addEventListener('lostpointercapture', stop);
+  };
+  const onUp = (e) => {
+    if (activePointer === e.pointerId) activePointer = null;
+  };
+
+  compare.addEventListener('pointerdown', onDown);
+  compare.addEventListener('pointermove', onMove);
+  compare.addEventListener('pointerup', onUp);
+  compare.addEventListener('pointercancel', onUp);
+  compare.addEventListener('lostpointercapture', onUp);
+
+  // Belt-and-braces fallback for touch on browsers that misbehave with pointer events
+  compare.addEventListener('touchmove', (e) => {
+    if (e.touches.length !== 1) return;
+    setPos(e.touches[0].clientX);
+    e.preventDefault();
+  }, { passive: false });
 
   const handle = compare.querySelector('.compare-handle');
   if (handle) {

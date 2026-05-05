@@ -641,9 +641,11 @@ h2 span { color: var(--blue); }
   --pos: 50%;
   cursor: ew-resize;
   user-select: none;
-  touch-action: pan-y;
+  touch-action: none;
+  -webkit-user-select: none;
   background: #000;
 }
+.compare-handle { touch-action: none; }
 .compare img {
   position: absolute;
   inset: 0;
