@@ -217,17 +217,19 @@ a { color: inherit; }
   max-width: 540px;
   margin: 0 0 28px;
 }
+.hero-cta { display: inline-flex; flex-direction: column; align-items: stretch; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .google-reviews.hero-reviews,
 .google-reviews.compact.hero-reviews {
-  margin-top: 22px;
+  margin: 18px 0 0;
   background: transparent;
   border: 0;
   padding: 0;
-  align-self: flex-start;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
 }
 .google-reviews.hero-reviews:hover { border: 0; transform: translateY(-2px); }
 .google-reviews-logo {
@@ -238,17 +240,6 @@ a { color: inherit; }
   height: 26px;
 }
 .google-reviews-logo svg { width: 100%; height: 100%; display: block; }
-.hero-reviews .google-reviews-count {
-  font-size: 0.95rem;
-  font-weight: 700;
-  text-transform: none;
-  letter-spacing: 0.01em;
-  color: #fff;
-  text-decoration: underline;
-  text-decoration-color: rgba(255,255,255,0.45);
-  text-underline-offset: 3px;
-}
-.hero-reviews:hover .google-reviews-count { text-decoration-color: var(--blue); }
 
 /* SECTIONS */
 section { scroll-margin-top: 80px; }
@@ -981,9 +972,9 @@ h2 span { color: var(--blue); }
   .hero-lede { font-size: 0.95rem; margin-bottom: 22px; }
   .hero-actions { gap: 10px; }
   .hero-actions .btn { flex: 1; text-align: center; }
-  .hero-reviews { margin-top: 18px; align-self: flex-start; padding: 0; gap: 8px; flex-direction: row; align-items: center; text-align: left; }
+  .hero-cta { align-self: stretch; width: 100%; display: flex; }
+  .hero-reviews { margin-top: 14px; padding: 0; gap: 10px; flex-direction: row; align-items: center; justify-content: center; }
   .hero-reviews .google-reviews-stars { font-size: 1.1rem; }
-  .hero-reviews .google-reviews-count { font-size: 0.85rem; }
   .hero-reviews .google-reviews-logo { width: 22px; height: 22px; }
 
   .section-title { font-size: clamp(1.6rem, 6vw, 2rem); margin-bottom: 26px; }
