@@ -86,7 +86,7 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
 
   const goTo = (idx) => {
     const wrapped = ((idx % slides.length) + slides.length) % slides.length;
-    slides[wrapped].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    track.scrollTo({ left: slides[wrapped].offsetLeft - track.offsetLeft, behavior: 'smooth' });
     setActive(wrapped);
   };
 
@@ -108,15 +108,6 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(currentIdx - 1); }
     else if (e.key === 'ArrowRight') { e.preventDefault(); goTo(currentIdx + 1); }
   });
-
-  let autoTimer = null;
-  const startAuto = () => { if (!autoTimer) autoTimer = setInterval(() => goTo(currentIdx + 1), 4500); };
-  const stopAuto = () => { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } };
-  carousel.addEventListener('mouseenter', stopAuto);
-  carousel.addEventListener('mouseleave', startAuto);
-  carousel.addEventListener('focusin', stopAuto);
-  carousel.addEventListener('focusout', startAuto);
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) startAuto();
 
   setActive(0);
 });
