@@ -1034,8 +1034,8 @@ h2 span { color: var(--blue); }
   .logo { height: 44px; transform: none; }
   .nav-wrap { padding: 6px 0; }
 
-  .hero { min-height: auto; }
-  .hero-overlay { min-height: auto; padding: 60px 0 40px; }
+  .hero { min-height: 100vh; min-height: 100svh; }
+  .hero-overlay { min-height: 100vh; min-height: 100svh; padding: 40px 0; }
   .hero-card { max-width: 100%; text-align: center; }
   .hero-eyebrow { letter-spacing: 0.12em; font-size: 0.78rem; }
   .hero h1 { font-size: clamp(1.9rem, 8vw, 2.6rem); margin-bottom: 14px; }
