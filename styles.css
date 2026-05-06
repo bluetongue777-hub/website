@@ -1154,7 +1154,7 @@ h2 span { color: var(--blue); }
   .nav-wrap { padding: 6px 0; }
 
   .hero { min-height: 85vh; min-height: 85svh; position: relative; }
-  .hero-overlay { min-height: 85vh; min-height: 85svh; padding: 80px 0 100px; align-items: flex-start; }
+  .hero-overlay { min-height: 85vh; min-height: 85svh; padding: 80px 0 100px; align-items: flex-start; background: rgba(0, 0, 0, 0.55); }
   .hero-scroll {
     display: flex;
     flex-direction: column;
