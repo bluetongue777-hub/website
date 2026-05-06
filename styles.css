@@ -231,9 +231,12 @@ a { color: inherit; }
   .mobile-brand-name {
     display: block;
     color: #fff;
-    font-size: 1.1rem;
-    letter-spacing: 0.08em;
+    font-size: 1.25rem;
+    letter-spacing: 0.06em;
+    line-height: 1.1;
   }
+  .mobile-brand-name + .mobile-brand-name { margin-top: 4px; }
+  .mobile-brand-blue { color: var(--blue); }
 }
 
 @keyframes hero-logo-in {
