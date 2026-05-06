@@ -204,6 +204,7 @@ a { color: inherit; }
   margin: 0 0 14px;
 }
 .hero-logo { display: none; }
+.hero-eyebrow-mobile { display: none; }
 
 .mobile-bar { display: none; }
 @media (max-width: 760px), (max-height: 500px) and (orientation: landscape) {
@@ -308,6 +309,7 @@ a { color: inherit; }
 
 @media (max-width: 760px), (max-height: 500px) and (orientation: landscape) {
   .hero-eyebrow-desktop { display: none; }
+  .hero-eyebrow-mobile { display: block; }
   .hero img.hero-logo { display: none; }
   .hero-card {
     animation: hero-content-in 0.9s ease-out 0.15s both;
