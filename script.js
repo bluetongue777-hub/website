@@ -69,6 +69,32 @@ if (toggle && nav) {
   });
 }
 
+// Mobile bar nav (hamburger on phone-only header)
+const mobileToggle = document.querySelector('.mobile-menu-toggle');
+const mobileNav = document.querySelector('.mobile-nav');
+if (mobileToggle && mobileNav) {
+  const closeMobile = () => {
+    mobileNav.classList.remove('open');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+  };
+  mobileToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = mobileNav.classList.toggle('open');
+    mobileToggle.setAttribute('aria-expanded', String(open));
+  });
+  mobileNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMobile);
+  });
+  document.addEventListener('click', (e) => {
+    if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && e.target !== mobileToggle) {
+      closeMobile();
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMobile();
+  });
+}
+
 // Before/after compare sliders
 document.querySelectorAll('[data-compare]').forEach((compare) => {
   const setPos = (clientX) => {
