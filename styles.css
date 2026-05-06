@@ -1154,7 +1154,13 @@ h2 span { color: var(--blue); }
   .nav-wrap { padding: 6px 0; }
 
   .hero { min-height: 85vh; min-height: 85svh; position: relative; }
-  .hero-overlay { min-height: 85vh; min-height: 85svh; padding: 80px 0 100px; align-items: flex-start; background: rgba(0, 0, 0, 0.55); }
+  .hero-overlay {
+    min-height: 85vh;
+    min-height: 85svh;
+    padding: 64px 0 56px;
+    align-items: flex-start;
+    background: rgba(0, 0, 0, 0.62);
+  }
   .hero-scroll {
     display: flex;
     flex-direction: column;
@@ -1179,19 +1185,19 @@ h2 span { color: var(--blue); }
   .hero-card { max-width: 100%; text-align: center; }
   .hero-eyebrow {
     letter-spacing: 0.1em;
-    font-size: 1.25rem;
-    margin: 0 0 8px;
+    font-size: 1.2rem;
+    margin: 0 0 12px;
   }
   .hero h1 {
     font-size: clamp(2.6rem, 10vw, 3.6rem);
-    line-height: 1.05;
-    margin: 0 0 30px;
+    line-height: 0.98;
+    margin: 0 0 24px;
   }
   .hero-lede {
-    font-size: 1.15rem;
-    line-height: 1.55;
-    margin: 0 auto 38px;
-    max-width: 520px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0 auto 32px;
+    max-width: 440px;
   }
   .hero-cta {
     align-self: stretch;
@@ -1199,14 +1205,14 @@ h2 span { color: var(--blue); }
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 22px;
+    gap: 16px;
   }
-  .hero-actions { gap: 14px; justify-content: center; width: 100%; }
-  .hero-actions .btn { flex: 1; text-align: center; padding: 18px 22px; font-size: 1rem; }
+  .hero-actions { gap: 12px; justify-content: center; width: 100%; }
+  .hero-actions .btn { flex: 1; text-align: center; padding: 16px 20px; font-size: 1rem; }
   .hero-reviews {
-    margin-top: 6px;
+    margin-top: 0;
     padding: 0;
-    gap: 14px;
+    gap: 12px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
