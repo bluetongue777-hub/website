@@ -356,6 +356,28 @@ a { color: inherit; }
   width: 100%;
 }
 .google-reviews.hero-reviews:hover { border: 0; transform: translateY(-2px); }
+.hero-reviews-info {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.1;
+  gap: 2px;
+}
+.hero-reviews-rating {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.hero-reviews-source {
+  font-weight: 600;
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 .google-reviews-logo {
   display: inline-flex;
   align-items: center;
@@ -1217,6 +1239,7 @@ h2 span { color: var(--blue); }
     align-items: center;
     justify-content: center;
   }
+  .hero-reviews-info { align-items: flex-start; }
   .hero-reviews .google-reviews-stars { font-size: 1.55rem; letter-spacing: 4px; }
   .hero-reviews .google-reviews-logo { width: 32px; height: 32px; }
 
