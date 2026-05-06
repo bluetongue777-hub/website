@@ -1182,13 +1182,6 @@ h2 span { color: var(--blue); }
     font-size: 1.25rem;
     margin: 0 0 8px;
   }
-  .hero-eyebrow-mobile {
-    font-weight: 500;
-    text-transform: none;
-    letter-spacing: 0.02em;
-    font-size: 1.15rem;
-    color: var(--blue);
-  }
   .hero h1 {
     font-size: clamp(2.6rem, 10vw, 3.6rem);
     line-height: 1.05;
