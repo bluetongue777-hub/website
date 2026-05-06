@@ -229,6 +229,7 @@ a { color: inherit; }
     align-items: flex-start;
     text-align: left;
     text-decoration: none;
+    font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, sans-serif;
     font-weight: 600;
     letter-spacing: 0.01em;
     line-height: 1.15;
