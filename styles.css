@@ -229,19 +229,17 @@ a { color: inherit; }
     align-items: flex-start;
     text-align: left;
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: 0.05em;
-    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.15;
   }
   .mobile-brand-name {
     display: block;
     color: #fff;
-    font-size: 1rem;
-    letter-spacing: 0.06em;
-    line-height: 1.1;
+    font-size: 1.05rem;
+    line-height: 1.15;
   }
-  .mobile-brand-name + .mobile-brand-name { margin-top: 3px; }
+  .mobile-brand-name + .mobile-brand-name { margin-top: 1px; }
   .mobile-brand-blue { color: var(--blue); }
 
   .mobile-menu-toggle {
