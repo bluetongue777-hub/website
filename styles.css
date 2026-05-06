@@ -1180,7 +1180,7 @@ h2 span { color: var(--blue); }
   .hero-eyebrow {
     letter-spacing: 0.1em;
     font-size: 1.25rem;
-    margin: 0 0 30px;
+    margin: 0 0 8px;
   }
   .hero h1 {
     font-size: clamp(2.6rem, 10vw, 3.6rem);
